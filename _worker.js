@@ -77,7 +77,7 @@ export default {
 						return bestSubConfig;
 					};
 					default:
-						// return new Response('Not found', { status: 404 });
+						return new Response('Not found', { status: 404 });
 						// For any other path, reverse proxy to 'ramdom website' and return the original response, caching it in the process
 						const randomHostname = cn_hostnames[Math.floor(Math.random() * cn_hostnames.length)];
 						const newHeaders = new Headers(request.headers);
